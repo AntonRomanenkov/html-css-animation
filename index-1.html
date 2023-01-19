@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #262626;
+        }
+
+        .container {
+            width: 300px;
+            height: 100px;
+            position: relative;
+        }
+
+        .container input {
+            margin: 20px 20px;
+            width: 250px;
+            height: 30px;
+            padding: 5px;
+            outline: none;
+        }
+
+        h2 {
+            color: red;
+            font-family: Courier new, monospace;
+            text-shadow: 0px 0px 10px red;
+            text-align: center;
+            text-transform: uppercase;
+            animation: a 2s linear alternate infinite;
+        }
+
+        @keyframes a {
+            0% {
+                transform: translateX(30px);
+            }
+
+            100% {
+                transform: translateX(-30px);
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 id="heading"></h2>
+        <input type="text" id="input" onkeyup="abc()" placeholder="Enter a text ">
+    </div>
+    <script type="text/javascript">
+        function abc() {
+            var heading =
+                document.getElementById('heading');
+            var input =
+                document.getElementById('input');
+
+            heading.innerHTML = input.value;
+        }
+    </script>
+</body>
+
+</html>
